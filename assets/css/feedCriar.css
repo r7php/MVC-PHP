@@ -1,0 +1,77 @@
+.All-feed{
+    width: 100%;
+    height: 900px;
+    
+}
+.text-fist{
+    margin-top: 4%;
+    text-align: center;
+}
+.text-second{
+    margin-top: 4%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.ts-1{
+    width: 300px;
+    /* background-color: blue; */
+}
+
+.ts-2{
+    width: 300px;
+    /* background-color: red; */
+}
+
+
+.text-three{
+    margin-top: 4%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.tt-1{
+    width: 300px;
+    /* background-color: blue; */
+}
+
+.tt-2{
+    width: 300px;
+    
+    /* background-color: red; */
+}
+
+
+
+
+.text-four{
+    margin-top: 4%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.tf-1{
+    width: 300px;
+    /* background-color: blue; */
+}
+
+.tf-2{
+    width: 300px;
+    /* background-color: red; */
+}
+
+.AV-pt-1{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+textarea{
+    width: 700px;
+    height: 100px;
+}
+
+.spac{
+    padding: 300px;
+}

@@ -1,0 +1,24 @@
+table{
+    margin-top: 10px;
+    width: 900px;
+    padding: 300px;
+
+}
+table th{
+    background: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+table tr td{
+
+    text-align: center;
+
+}
+
+   table tr td input{
+    border: 0;
+    text-align: center;
+    width: 70px;
+}

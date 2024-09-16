@@ -1,0 +1,24 @@
+
+    textarea{
+        border-radius: 10px;
+        border-bottom: 10px;
+    }
+    #tb{
+        border: 1px solid black; height: 100px; width:500px;padding: 10px; display:none;
+    }
+    #tb2{
+        margin-top: 10px; border: 1px solid black; height: 100px; width:500px;padding: 10px;display:none;
+    }
+    .radio-container {
+  display: flex;
+  justify-content: center;
+  
+}
+.table{
+    border:1px solid black;width:500px
+}
+
+.radio-container label {
+  margin-right: 10px; /* Espaçamento entre os radio buttons */
+}
+

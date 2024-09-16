@@ -1,0 +1,19 @@
+body{
+    background-color:#EEEEEEEE;
+}
+header{
+    max-width: 800px;
+    height: 100px;
+    background-color: #FFFFFFFF;
+    margin: auto;
+    text-align: center;
+}
+section{
+    max-width: 800px;
+    background-color: #FFFFFFFF;
+    margin: auto;
+}
+footer{
+    height: 100px;
+    text-align: center;
+}
