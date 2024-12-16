@@ -8,8 +8,8 @@
         public function index(){  
     //        session_destroy();
 
-         //   $u = new Usuarios();
-           // $u->verificar_login();
+            $u = new Usuarios();
+            $u->verificar_login();
 
             $dados = array();
                 

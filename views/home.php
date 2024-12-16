@@ -20,7 +20,7 @@ date_default_timezone_set('America/Sao_Paulo');
                 <li class="nav-item">
                 <a class="nav-link" href="<?php echo BASE_URL.'feed';  ?>">
                 <i class="fas fa-user-shield"></i>
-                    <span>Home</span></a>
+                    <span>Feedback</span></a>
              </li>
             </li>
         </ul>

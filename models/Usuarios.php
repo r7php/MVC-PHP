@@ -25,23 +25,54 @@ class Usuarios extends model
 
 	public function logar($login,$senha){
            
-           if($login == 'fulano' && $senha = '123'){
-            return true;
-           }
-
-           
-           //$sql  = "select*from colaboradores where login = '$login' and senha = '$senha' ";
+           $sql  = "select*from BD_PONTO_MAIS.dbo.colaboradores where registration_number = '$login' and RIGHT(RTRIM(LTRIM(REPLACE(REPLACE(CPF,'.',''),'-',''))),4)='$senha'";
            
 
-          //  $sql = $this->db->prepare($sql);
-          //  $sql->execute();
-          //  $val = $sql->fetch(PDO::FETCH_ASSOC); 
+           $sql = $this->db->prepare($sql);
+           $sql->execute();
+           $val = $sql->fetch(PDO::FETCH_ASSOC); 
 
-       
+            if(!empty($val)){
+		         
+                  $nomeCompleto = $val['name'];
+                  $_SESSION['ID'] = $val['registration_number'];
+                  $_SESSION['CARGO'] = $val['job_title'];
+                  
+                    $n1 = $this->juntarNomeUltimoNome($nomeCompleto);
+                    $n2 = $this->extrairPrimeiroSegundoNome($nomeCompleto);
+
+                    
+                    $ar = array("$n1","$n2");
+                     for ($i=0; $i <2 ; $i++) { 
+                      
+                      $sql = "SELECT top 1 * FROM BD_PONTO_MAIS.dbo.colaboradores where team = '$ar[$i]'";
+                      $sql = $this->db->prepare($sql);
+                      $sql->execute();
+                      $vals = $sql->fetch(PDO::FETCH_ASSOC); 
+                      //var_dump($vals);
+                      if($vals['team'] != ""){
+                            $_SESSION['NOME_EQ'] =  $vals['team'];
+                            return true;
+                      }
+
+                    }
 
 
 
-          }
+		       
+
+
+		    }else{
+		    	return false;
+		    }
+
+
+        }
+
+
+
+
+
 
     private function juntarNomeUltimoNome($nomeCompleto) {
     // Explode o nome completo em um array, separando as palavras pelo espaço em branco
